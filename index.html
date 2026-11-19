@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Events</title>
+    <link rel="stylesheet" href="ca2.css">
+</head>
+<body>
+    <header id="header">
+        <h1 class="logo">VirtualEvents</h2><br><br>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#events">Events</a>
+            <a href="#categories">Categories</a>
+            <a href="#features">Features</a>
+            <a href="#registration">Register</a>
+        </nav>
+    </header>
+    <!-- main welcome section -->
+     <main>
+    <section id="home">
+    <h1 class="main-heading">Welcome to Virtual Events</h1>
+    <p class="tagline">Dicover , Connect and Experience </p>
+    <p class="intro_text">Discover exciting online events.</p>
+    </section>
+    <hr>
+     <!-- Home Banner Image -->
+        <img
+            class="home-image"
+            src="virtual image.png"
+            alt="Virtual event and workshop banner"
+            width="500"
+        >
+
+    </section>
+
+    <hr>
+    <!-- Events section  -->
+     <section id="events">
+     <h1 class="section-heading">Explore our events </h1>
+     <h2 class="sub-heading" >Upcoming events </h2>
+     <p class="event-description">Learn new skills from industry experts</p>
+     <p class="register-text"><strong>Register id </strong></p>
+     </section>
+     <hr>
+     <img
+            class="event-image"
+            src="eventbanner.jpg"
+            alt="Virtual event and workshop banner"
+            width="500">
+            <hr>
+         <hr>
+
+    <!-- Event Categories Section -->
+    <section id="categories">
+
+        <h2 class="section-heading">Event Categories :</h2>
+
+        <ul class="category-list">
+            <li>Web Development</li>
+            <li>Python Programming</li>
+            <li>Artificial Intelligence</li>
+            <li>Cyber Security</li>
+            <li>Data Science</li>
+        </ul>
+
+        <h3 class="sub-heading">How to Join an Event?</h3>
+
+        <ol class="joining-steps">
+            <li>Choose your favourite event.</li>
+            <li>Fill out the registration form.</li>
+            <li>Receive your confirmation.</li>
+            <li>Join the online event.</li>
+        </ol>
+
+        <h3 class="sub-heading">Learn About Our Workshops</h3>
+
+        <dl class="workshop-description">
+
+            <dt>Web Development</dt>
+            <dd>Learn how to create websites.</dd>
+            <br><br>
+
+            <dt>Python Programming</dt>
+            <dd>Learn programming using Python.</dd>
+
+        </dl>
+
+    </section>
+
+    <hr>
+     <!-- Features section  -->
+
+    <section id="features">
+    
+        <h2 class="section-heading">Why Choose VirtualEvents?</h2>
+    
+        <p class="feature-description">
+            Join online events, connect with experts and learn from anywhere.
+        </p>
+    
+    </section>
+    <hr>
+    <!-- Aside Section -->
+    <aside class="special-announcement">
+
+            <h3>Special Announcement</h3>
+
+            <p>
+                New workshops are coming soon!
+                Stay connected with VirtualEvents.
+            </p>
+
+    </aside>
+    <hr>
+    <!-- Event Schedule Section -->
+    <section id="schedule">
+
+        <h2 class="section-heading">Event Schedule</h2>
+
+        <table border="1" class="event-table">
+
+            <tr>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>Duration</th>
+            </tr>
+
+            <tr>
+                <td>HTML Workshop</td>
+                <td>10 November</td>
+                <td>2 Hours</td>
+            </tr>
+
+            <tr>
+                <td>Python Workshop</td>
+                <td>12 November</td>
+                <td>3 Hours</td>
+            </tr>
+
+            <tr>
+                <td>AI Workshop</td>
+                <td>15 November</td>
+                <td>2 Hours</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <hr>
+
+
+    <!-- Registration Section -->
+    <section id="registration">
+
+        <h2 class="section-heading">Register for an Event</h2>
+
+        <p class="registration-description">
+            Get ready to explore exciting online events.
+        </p>
+         <form id="registration-form" class="registration-form">
+
+            <!-- Full Name -->
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname"
+            placeholder="Enter your full name" required>
+
+            <br><br>
+
+            <!-- Email -->
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email"
+            placeholder="Enter your email" required>
+
+            <br><br>
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"
+            placeholder="Enter your phone number" required>
+
+            <br><br>
+
+            <!-- Event Selection -->
+            <label for="event">Select an Event:</label>
+
+            <select id="event" name="event" required>
+                <option value="">Choose an event</option>
+                <option value="html">HTML Workshop</option>
+                <option value="python">Python Workshop</option>
+                <option value="ai">AI Workshop</option>
+            </select>
+
+            <br><br>
+
+            <!-- Preferred Mode -->
+            <p>Preferred Mode:</p>
+
+            <input type="radio" id="online" name="mode" value="online">
+            <label for="online">Online</label>
+
+            <input type="radio" id="offline" name="mode" value="offline">
+            <label for="offline">Offline</label>
+
+            <br><br>
+
+            <!-- Message -->
+            <label for="message">Your Message:</label>
+
+            <br>
+
+            <textarea id="message" name="message"
+            rows="4" cols="30"
+            placeholder="Write your message here"></textarea>
+
+            <br><br>
+
+            <!-- Terms and Conditions -->
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the terms and conditions.</label>
+
+            <br><br>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Registration</button>
+
+        </form>
+    </section>
+</main>
+<hr>
+<footer id="footer">
+
+        <h2 class="footer-logo">VirtualEvents</h2>
+
+        <p class="footer-text">
+            Discover, Connect and Experience.
+        </p>
+
+        <p class="contact-info">
+            Contact: info@virtualevents.com
+        </p>
+
+        <p class="copyright">
+            &copy; 2026 VirtualEvents. All Rights Reserved.
+        </p>
+
+    </footer>
+    
+</body>
+</html>

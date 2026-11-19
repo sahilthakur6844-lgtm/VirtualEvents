@@ -1,0 +1,757 @@
+/* =========================================
+   1. GLOBAL STYLING
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #F4F8FB;
+    color: #334155;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: #E2E8F0;
+}
+
+
+/* =========================================
+   2. HEADER & NAVIGATION
+========================================= */
+
+#header {
+    background: #102A43;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 4px 18px rgba(16, 42, 67, 0.12);
+}
+
+.logo {
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: #D9E6F2;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+    position: relative;
+}
+
+.navbar a:hover {
+    color: #00BFA6;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #00BFA6;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+#header > button {
+    background: #00BFA6;
+    color: #102A43;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+#header > button:hover {
+    background: #00A38D;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   3. HOME SECTION
+========================================= */
+
+#home {
+    text-align: center;
+    padding: 85px 7% 70px;
+    background:
+        linear-gradient(135deg, #EAF5F7, #F4F8FB);
+}
+
+.main-heading {
+    font-size: 48px;
+    font-weight: 800;
+    color: #102A43;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.tagline {
+    font-size: 24px;
+    color: #008F7A;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.intro_text {
+    font-size: 18px;
+    color: #64748B;
+    margin-bottom: 20px;
+}
+
+.home-image {
+    display: block;
+    width: 85%;
+    max-width: 1000px;
+    height: auto;
+    margin: 40px auto 10px;
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgba(16, 42, 67, 0.15);
+    transition: 0.3s;
+}
+
+.home-image:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================================
+   4. COMMON SECTION STYLING
+========================================= */
+
+section {
+    padding: 75px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    color: #102A43;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.sub-heading {
+    color: #008F7A;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 25px 0 12px;
+}
+
+
+/* =========================================
+   5. EVENTS SECTION
+========================================= */
+
+#events {
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.event-description {
+    font-size: 18px;
+    color: #64748B;
+    margin-bottom: 10px;
+}
+
+.register-text {
+    color: #008F7A;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.event-image {
+    display: block;
+    width: 85%;
+    max-width: 850px;
+    height: auto;
+    margin: 35px auto;
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgba(16, 42, 67, 0.12);
+    transition: 0.3s;
+}
+
+.event-image:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================================
+   6. EVENT SEARCH
+========================================= */
+
+#search-area {
+    max-width: 750px;
+    margin: 35px auto;
+    padding: 30px;
+    background: #EAF5F7;
+    border: 1px solid #D2E9E8;
+    border-radius: 18px;
+}
+
+#search-area h2 {
+    color: #102A43;
+    margin-bottom: 18px;
+    font-size: 24px;
+}
+
+#searchInput {
+    width: 70%;
+    max-width: 450px;
+    padding: 13px 16px;
+    border: 1px solid #C7D9E2;
+    border-radius: 10px;
+    outline: none;
+    background: white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+#searchInput:focus {
+    border-color: #00BFA6;
+    box-shadow: 0 0 0 3px rgba(0, 191, 166, 0.15);
+}
+
+#searchResult {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #008F7A;
+}
+
+
+/* =========================================
+   7. EVENT CATEGORIES
+========================================= */
+
+#categories {
+    background: #F0F7FA;
+    text-align: center;
+}
+
+#categories .section-heading {
+    color: #102A43;
+    margin-bottom: 40px;
+}
+
+#categories .sub-heading {
+    font-size: 25px;
+    color: #008F7A;
+    margin: 50px 0 25px;
+}
+
+
+/* Category Cards */
+
+.category-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0;
+}
+
+.category-list li {
+    background: #FFFFFF;
+    padding: 30px 20px;
+    border-radius: 18px;
+    color: #102A43;
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px solid #E2E8F0;
+    border-bottom: 4px solid #00BFA6;
+    box-shadow: 0 6px 18px rgba(16, 42, 67, 0.06);
+    transition: 0.3s;
+}
+
+.category-list li:hover {
+    transform: translateY(-8px);
+    background: #102A43;
+    color: white;
+    border-bottom-color: #FFB86C;
+    box-shadow: 0 12px 25px rgba(16, 42, 67, 0.15);
+}
+
+
+/* Joining Steps */
+
+.joining-steps {
+    list-style: none;
+    counter-reset: step;
+    max-width: 800px;
+    margin: auto;
+    padding: 0;
+    text-align: left;
+}
+
+.joining-steps li {
+    counter-increment: step;
+    position: relative;
+    background: #FFFFFF;
+    padding: 22px 25px 22px 80px;
+    margin: 20px 0;
+    border-radius: 15px;
+    color: #334155;
+    font-size: 17px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 5px 15px rgba(16, 42, 67, 0.05);
+    transition: 0.3s;
+}
+
+.joining-steps li:hover {
+    transform: translateX(5px);
+}
+
+.joining-steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #00BFA6;
+    color: #102A43;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+
+/* Workshop Description */
+
+.workshop-description {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 950px;
+    margin: auto;
+    text-align: left;
+}
+
+.workshop-description dt {
+    background: #102A43;
+    color: white;
+    padding: 22px;
+    border-radius: 15px 15px 0 0;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 4px solid #00BFA6;
+}
+
+.workshop-description dd {
+    background: #FFFFFF;
+    color: #64748B;
+    padding: 25px;
+    border-radius: 0 0 15px 15px;
+    min-height: 100px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 6px 18px rgba(16, 42, 67, 0.05);
+}
+
+
+/* =========================================
+   8. FEATURES SECTION
+========================================= */
+
+#features {
+    background: #FFFFFF;
+    text-align: center;
+}
+
+.feature-description {
+    max-width: 850px;
+    margin: auto;
+    font-size: 19px;
+    color: #64748B;
+}
+
+
+/* =========================================
+   9. SPECIAL ANNOUNCEMENT
+========================================= */
+
+.special-announcement {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #FFF7ED;
+    border-left: 6px solid #FFB86C;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(16, 42, 67, 0.05);
+}
+
+.special-announcement h3 {
+    color: #9A3412;
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+
+.special-announcement p {
+    color: #7C4524;
+}
+
+
+/* =========================================
+   10. EVENT SCHEDULE
+========================================= */
+
+#schedule {
+    background: #EAF5F7;
+    text-align: center;
+}
+
+.event-table {
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+    border-collapse: collapse;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(16, 42, 67, 0.08);
+}
+
+.event-table th {
+    background: #102A43;
+    color: white;
+    padding: 18px;
+    font-size: 16px;
+    border-bottom: 3px solid #00BFA6;
+}
+
+.event-table td {
+    padding: 17px;
+    text-align: center;
+    color: #334155;
+    border: 1px solid #E2E8F0;
+}
+
+.event-table tr:nth-child(even) {
+    background: #F0F7FA;
+}
+
+.event-table tr:hover {
+    background: #DDF5F0;
+}
+
+
+/* =========================================
+   11. REGISTRATION FORM
+========================================= */
+
+#registration {
+    background: #F0F7FA;
+}
+
+.registration-description {
+    text-align: center;
+    color: #64748B;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.registration-form {
+    max-width: 700px;
+    margin: auto;
+    padding: 40px;
+    background: #FFFFFF;
+    border-radius: 22px;
+    border: 1px solid #DCE7EE;
+    box-shadow: 0 15px 35px rgba(16, 42, 67, 0.08);
+}
+
+.registration-form label {
+    display: inline-block;
+    font-weight: 600;
+    color: #102A43;
+    margin: 8px 0;
+}
+
+.registration-form input:not([type="radio"]):not([type="checkbox"]),
+.registration-form select,
+.registration-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 1px solid #DCE7EE;
+    border-radius: 10px;
+    font-size: 15px;
+    background: #F8FAFC;
+    color: #334155;
+    transition: 0.3s;
+}
+
+.registration-form input:focus,
+.registration-form select:focus,
+.registration-form textarea:focus {
+    outline: none;
+    border-color: #00BFA6;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(0, 191, 166, 0.12);
+}
+
+.registration-form input[type="radio"],
+.registration-form input[type="checkbox"] {
+    accent-color: #00BFA6;
+    margin-right: 6px;
+}
+
+.registration-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.registration-form p {
+    color: #102A43;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   12. BUTTONS
+========================================= */
+
+/* Registration Button */
+
+.registration-form button {
+    background: #00BFA6;
+    color: #102A43;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 800;
+    box-shadow: 0 5px 15px rgba(0, 191, 166, 0.15);
+}
+
+.registration-form button:hover {
+    background: #009E89;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* General Buttons */
+
+#home button,
+#events button,
+#schedule button {
+    background: #102A43;
+    color: white;
+    padding: 13px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(16, 42, 67, 0.12);
+    margin: 5px;
+}
+
+#home button:hover,
+#events button:hover,
+#schedule button:hover {
+    background: #00BFA6;
+    color: #102A43;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   13. REGISTRATION SUMMARY
+========================================= */
+
+#registration-summary {
+    max-width: 700px;
+    margin: 30px auto 0;
+    padding: 25px;
+    background: white;
+    border: 1px solid #D2E9E8;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(16, 42, 67, 0.06);
+    color: #334155;
+}
+
+#registration-summary h2 {
+    color: #008F7A;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   14. FOOTER
+========================================= */
+
+#footer {
+    background: #102A43;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 4px solid #00BFA6;
+}
+
+.footer-logo {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.footer-text,
+.contact-info,
+.copyright {
+    color: #D9E6F2;
+    margin: 10px 0;
+}
+
+.contact-info {
+    margin-top: 18px;
+}
+
+.copyright {
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   15. RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    #header {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+
+    .navbar {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .main-heading {
+        font-size: 36px;
+    }
+
+    .section-heading {
+        font-size: 29px;
+    }
+
+    .home-image,
+    .event-image {
+        width: 100%;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+
+    .registration-form {
+        padding: 25px;
+    }
+
+    .event-table th,
+    .event-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #searchInput {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .navbar {
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .main-heading {
+        font-size: 29px;
+    }
+
+    .tagline {
+        font-size: 19px;
+    }
+
+    .section-heading {
+        font-size: 25px;
+    }
+
+    .category-list {
+        grid-template-columns: 1fr;
+    }
+
+    .joining-steps li {
+        padding-left: 70px;
+        font-size: 15px;
+    }
+
+    .special-announcement {
+        margin: 25px 5%;
+        padding: 22px;
+    }
+
+    .registration-form {
+        padding: 20px;
+    }
+}
+   
